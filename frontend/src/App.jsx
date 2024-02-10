@@ -4,6 +4,7 @@ import { BrowserRouter, Routes,Route} from 'react-router-dom'
 import Signin from './components/Signin'
 import Signup from './components/Signup'
 import {SnackbarProvider} from 'notistack'
+import FileUpload from './components/FileUpload'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Header />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/fileupload" element={<FileUpload />} />
         </Routes>
       </BrowserRouter>
       </SnackbarProvider>
