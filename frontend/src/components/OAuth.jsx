@@ -12,6 +12,16 @@ const OAuth = () => {
             const result = await signInWithPopup(auth,provider);
             console.log(result);
             console.log(result.user.displayName);
+
+            const res = await fetch('http://localhost:3000/user/add',{
+                method:'POST',
+                body:JSON.stringify({name:result.user.displayName,email:result.user.email,photo:result.user.photoURL}),
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+            const data = await res.json();
+            console.log(data);
         } catch (error) {
             console.log('Error in Google Signin', error);
         }
