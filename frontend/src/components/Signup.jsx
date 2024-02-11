@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import { useNavigate } from 'react-router-dom';
+import OAuth from './OAuth';
 
 const SignupSchema = Yup.object().shape({
     name: Yup.string().required('Name is required').min(4,'Name is too short'),
@@ -167,6 +168,7 @@ const Signup = () => {
           >
             Create an account
           </button>
+          <OAuth />
           <p className="text-sm font-light text-gray-500 dark:text-gray-400">
             Already have an account?{" "}
             <NavLink to='/signin'

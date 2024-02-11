@@ -1,6 +1,7 @@
 import { useFormik } from 'formik'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import OAuth from './OAuth'
 
 const Signin = () => {
 
@@ -91,6 +92,7 @@ const Signin = () => {
           >
             Sign in
           </button>
+          <OAuth />
           <p className="text-sm font-light text-gray-500 dark:text-gray-400">
             Don’t have an account yet?{" "}
             <NavLink to='/signup'
