@@ -21,7 +21,7 @@ const OAuth = () => {
                 }
             })
             const data = await res.json();
-            console.log(data);
+            console.log(data); 
         } catch (error) {
             console.log('Error in Google Signin', error);
         }
