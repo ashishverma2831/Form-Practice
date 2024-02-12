@@ -5,6 +5,7 @@ import Signin from './components/Signin'
 import Signup from './components/Signup'
 import {SnackbarProvider} from 'notistack'
 import FileUpload from './components/FileUpload'
+import Home from './pages/Home'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/fileupload" element={<FileUpload />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </BrowserRouter>
       </SnackbarProvider>

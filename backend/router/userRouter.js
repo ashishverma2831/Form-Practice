@@ -14,4 +14,17 @@ router.post('/add',(req,res)=>{
     });
 })
 
+router.post('/oauth',(req,res)=>{
+    console.log(req.body);
+    const {name,email,photo} = req.body
+    // console.log(name,email,photo);
+    new Model(req.body).save()
+    .then((result) => {
+        res.json(result)
+    }).catch((err) => {
+        console.error(err);
+        res.json(err)
+    });
+})
+
 module.exports = router

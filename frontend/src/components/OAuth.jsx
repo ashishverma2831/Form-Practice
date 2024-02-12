@@ -1,9 +1,11 @@
 // import React from 'react'
 import { GoogleAuthProvider, getAuth, signInWithPopup, } from 'firebase/auth'
 import { app } from '../firebase';
+import { useNavigate } from 'react-router-dom';
 
 const OAuth = () => {
 
+    const navigate = useNavigate();
     const handleGoogleClick = async () => {
         try {
             const provider = new GoogleAuthProvider();
@@ -13,7 +15,7 @@ const OAuth = () => {
             console.log(result);
             console.log(result.user.displayName);
 
-            const res = await fetch('http://localhost:3000/user/add',{
+            const res = await fetch('http://localhost:3000/user/oauth',{
                 method:'POST',
                 body:JSON.stringify({name:result.user.displayName,email:result.user.email,photo:result.user.photoURL}),
                 headers:{
@@ -21,7 +23,14 @@ const OAuth = () => {
                 }
             })
             const data = await res.json();
-            console.log(data); 
+            // console.log("Hello"+data); 
+            if(res.status===200){
+                console.log('Register Successfully');
+                navigate('/home');
+            }
+            else{
+                console.log('Something went Wrong');
+            }
         } catch (error) {
             console.log('Error in Google Signin', error);
         }
