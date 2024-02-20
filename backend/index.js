@@ -26,6 +26,7 @@ app.use(cors({
 }));
 app.use('/user',UserRouter);
 app.use('/util',UtilRouter);
+app.use(express.static('./uploads'));
 
 
 app.listen(port,()=>{
