@@ -16,6 +16,7 @@ mongoose.connect(url)
 
 // Routers
 const UserRouter = require('./router/userRouter')
+const UtilRouter = require('./router/util')
 
 
 // middlewares
@@ -24,6 +25,7 @@ app.use(cors({
     origin: 'http://localhost:5173'
 }));
 app.use('/user',UserRouter);
+app.use('/util',UtilRouter);
 
 
 app.listen(port,()=>{
@@ -33,5 +35,5 @@ app.get('/',(req,res)=>{
     res.send('Hello expressdbfksdcf')
 })
 app.get('/getbyid',(req,res)=>{
-    res.send('Hello expressdbfksdcfassssssssssssssssssssssssssssssssssssssss')
+    res.send('Hello express')
 })
