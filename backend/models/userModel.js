@@ -15,4 +15,4 @@ const mySchema = new Schema({
     confirm:String
 })
 
-module.exports = model('user',mySchema)
+module.exports = model('user',mySchema);
