@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Header'
 
 const FileUpload = () => {
+  const [selFile, setSelFile] = useState('');
   const uploadFile = (e) => {
     const file = e.target.files[0];
     setSelFile(file.name);
