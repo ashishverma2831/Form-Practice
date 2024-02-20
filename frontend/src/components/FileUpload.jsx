@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import Header from './Header'
 
+
+
 const FileUpload = () => {
+  
   const [selFile, setSelFile] = useState('');
   const uploadFile = (e) => {
     const file = e.target.files[0];
@@ -15,8 +18,13 @@ const FileUpload = () => {
       if (res.status === 200) {
         console.log("file uploaded");
       }
+    })
+    .catch((err) => {
+      console.error(err);
     });
   };
+  console.log(selFile);
+
   return (
     <>
       <Header />
