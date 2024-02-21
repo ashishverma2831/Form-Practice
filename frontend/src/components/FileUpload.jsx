@@ -82,7 +82,7 @@ const FileUpload = () => {
         </form>
       </section>
       <br/>
-      <section>
+      <section >
         {
           imageList.map((image, index) => {
             return (
