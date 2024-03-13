@@ -72,7 +72,7 @@ const FileUpload = () => {
       <Header />
       <section>
         {/* <form> */}
-        <form onSubmit={imageUpload.handleSubmit}>
+        <form onSubmit={imageUpload.handleSubmit} encType='multipart/form-data'>
           <input type="file" id="avatar" 
           onChange={uploadFile} />
           <br/>
