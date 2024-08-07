@@ -14,11 +14,11 @@ const App = () => {
       <BrowserRouter>
       {/* <Header /> */}
         <Routes>
-          <Route path="/" element={<Header />} />
+          {/* <Route path="/" element={<Header />} /> */}
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/fileupload" element={<FileUpload />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
       </SnackbarProvider>

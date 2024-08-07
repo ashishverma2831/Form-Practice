@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import { useNavigate } from 'react-router-dom';
 import OAuth from './OAuth';
+import Header from './Header';
 
 const SignupSchema = Yup.object().shape({
     name: Yup.string().required('Name is required').min(4,'Name is too short'),
@@ -52,6 +53,7 @@ const Signup = () => {
 
   return (
     <>
+        <Header />
         <section className="bg-gray-50 dark:bg-gray-900">
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     

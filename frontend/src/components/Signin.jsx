@@ -2,6 +2,7 @@ import { useFormik } from 'formik'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import OAuth from './OAuth'
+import Header from './Header'
 
 const Signin = () => {
 
@@ -14,6 +15,7 @@ const Signin = () => {
 
   return (
     <>
+    <Header />
         <section className="bg-gray-50 dark:bg-gray-900">
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     
